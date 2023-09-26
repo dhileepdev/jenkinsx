@@ -4,9 +4,9 @@ metadata:
   creationTimestamp: null
 spec:
   groups:
-  - owner: dhileepdev
-    provider: https://github.com
-    providerKind: github
+  - owner: dhileep2
+    provider: https://gitlab.com
+    providerKind: gitlab
     repositories:
     - name: quickstart
     scheduler: in-repo
