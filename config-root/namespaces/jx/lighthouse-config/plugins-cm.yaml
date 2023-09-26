@@ -4,7 +4,11 @@ data:
     approve:
     - lgtm_acts_as_approve: true
       repos:
-      - dhileepdev/jenkinsx
+      - dhileep2/jenkinsx
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - dhileepdev/quickstart
       require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
@@ -16,7 +20,12 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
-      dhileepdev/jenkinsx:
+      dhileep2/jenkinsx:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      dhileepdev/quickstart:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -26,8 +35,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
-      dhileepdev/jenkinsx:
+      dhileep2/jenkinsx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      dhileepdev/quickstart:
       - approve
       - assign
       - help
@@ -51,8 +74,13 @@ data:
       xxl: 0
     triggers:
     - repos:
-      - dhileepdev/jenkinsx
+      - dhileep2/jenkinsx
+      trusted_org: dhileep2
+    - repos:
+      - dhileepdev/quickstart
       trusted_org: dhileepdev
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

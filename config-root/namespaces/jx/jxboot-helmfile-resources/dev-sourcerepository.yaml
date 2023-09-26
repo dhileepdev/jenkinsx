@@ -14,10 +14,10 @@ spec:
   provider: "https://github.com"
   providerKind: 'github'
   providerName: 'github'
-  org: "dhileepdev"
+  org: "dhileep2"
   repo: "jenkinsx"
-  httpCloneURL: "https://github.com/dhileepdev/jenkinsx.git"
-  url: "https://github.com/dhileepdev/jenkinsx.git"
+  httpCloneURL: "https://github.com/dhileep2/jenkinsx.git"
+  url: "https://github.com/dhileep2/jenkinsx.git"
   scheduler:
     kind: Scheduler
     name: "in-repo"

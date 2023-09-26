@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: dhileepdev
+    provider: github
+    repository: quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: dhileepdev-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/dhileepdev/quickstart.git
+  org: dhileepdev
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/dhileepdev/quickstart

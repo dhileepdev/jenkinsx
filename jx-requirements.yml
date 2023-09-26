@@ -16,7 +16,7 @@ spec:
     provider: minikube
   environments:
   - key: dev
-    owner: dhileepdev
+    owner: dhileep2
     repository: jenkinsx
   - key: staging
   - key: production
