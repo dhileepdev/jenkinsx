@@ -8,6 +8,7 @@ spec:
     provider: https://gitlab.com
     providerKind: gitlab
     repositories:
+    - name: python-test
     - name: quickstart
     scheduler: in-repo
   slack:
