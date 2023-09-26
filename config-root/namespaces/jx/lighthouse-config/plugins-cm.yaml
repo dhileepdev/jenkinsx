@@ -8,7 +8,7 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - dhileepdev/quickstart
+      - dhileep2/quickstart
       require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
@@ -25,7 +25,7 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
-      dhileepdev/quickstart:
+      dhileep2/quickstart:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -50,7 +50,7 @@ data:
       - cat
       - dog
       - pony
-      dhileepdev/quickstart:
+      dhileep2/quickstart:
       - approve
       - assign
       - help
@@ -77,8 +77,8 @@ data:
       - dhileep2/jenkinsx
       trusted_org: dhileep2
     - repos:
-      - dhileepdev/quickstart
-      trusted_org: dhileepdev
+      - dhileep2/quickstart
+      trusted_org: dhileep2
     welcome:
     - message_template: Welcome
 kind: ConfigMap

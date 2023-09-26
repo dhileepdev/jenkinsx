@@ -13,7 +13,7 @@ metadata:
 spec:
   source:
     ref: "master"
-    url: https://github.com/dhileep2/jenkinsx.git
+    url: https://gitlab.com/dhileep2/jenkinsx.git
   kind: Development
   label: Development
   namespace: jx
@@ -29,6 +29,6 @@ spec:
     envOrganisation: todo
     gitServer: https://github.com
     kubeProvider: "minikube"
-    pipelineUsername: "dhileepdev"
+    pipelineUsername: "dhileep2"
     pipelineUserEmail: "jenkins-x@googlegroups.com"
     prowConfig: Scheduler

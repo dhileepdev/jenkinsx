@@ -11,13 +11,13 @@ metadata:
   namespace: jx
 spec:
   description: "the git repository for the Dev environment"
-  provider: "https://github.com"
-  providerKind: 'github'
-  providerName: 'github'
+  provider: "https://gitlab.com"
+  providerKind: 'gitlab'
+  providerName: 'gitlab'
   org: "dhileep2"
   repo: "jenkinsx"
-  httpCloneURL: "https://github.com/dhileep2/jenkinsx.git"
-  url: "https://github.com/dhileep2/jenkinsx.git"
+  httpCloneURL: "https://gitlab.com/dhileep2/jenkinsx.git"
+  url: "https://gitlab.com/dhileep2/jenkinsx.git"
   scheduler:
     kind: Scheduler
     name: "in-repo"

@@ -26,9 +26,9 @@ jxRequirements:
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
-    gitKind: github
-    gitName: github
-    gitServer: https://github.com
+    gitKind: gitlab
+    gitName: gitlab
+    gitServer: https://gitlab.com
     provider: minikube
   environments:
   - key: dev
@@ -45,7 +45,7 @@ jxRequirements:
       enabled: false
       production: false
   pipelineUser:
-    username: dhileepdev
+    username: dhileep2
   repository: bucketrepo
   secretStorage: local
   vault: {}

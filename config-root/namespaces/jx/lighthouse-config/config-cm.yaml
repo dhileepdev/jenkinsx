@@ -8,7 +8,7 @@ data:
     in_repo_config:
       enabled:
         dhileep2/jenkinsx: true
-        dhileepdev/quickstart: true
+        dhileep2/quickstart: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -21,7 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         dhileep2/jenkinsx: merge
-        dhileepdev/quickstart: merge
+        dhileep2/quickstart: merge
       queries:
       - labels:
         - approved
@@ -33,7 +33,7 @@ data:
         - needs-rebase
         repos:
         - dhileep2/jenkinsx
-        - dhileepdev/quickstart
+        - dhileep2/quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -44,7 +44,7 @@ data:
         - needs-rebase
         repos:
         - dhileep2/jenkinsx
-        - dhileepdev/quickstart
+        - dhileep2/quickstart
       target_url: http://lighthouse-jx./merge/status
 kind: ConfigMap
 metadata:

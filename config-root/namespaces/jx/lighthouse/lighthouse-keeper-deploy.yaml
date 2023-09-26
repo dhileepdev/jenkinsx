@@ -27,7 +27,7 @@ spec:
         ad.datadoghq.com/keeper.logs: '[{"source":"lighthouse","service":"keeper"}]'
         prometheus.io/port: "9090"
         prometheus.io/scrape: "true"
-        jenkins-x.io/hash: 'e8ea2537baa7b50d564d478d6cce70a5dc6643c1e804e412fccdbac5cdde74c1'
+        jenkins-x.io/hash: '57adeadafbf731eb64a2447f8e9fd31a91943407d62c557d1a757d88b20f43a3'
       labels:
         app: lighthouse-keeper
     spec:
@@ -60,11 +60,11 @@ spec:
           timeoutSeconds: 1
         env:
         - name: "GIT_KIND"
-          value: "github"
+          value: "gitlab"
         - name: "GIT_SERVER"
-          value: "https://github.com"
+          value: "https://gitlab.com"
         - name: "GIT_USER"
-          value: dhileepdev
+          value: dhileep2
         - name: "GIT_TOKEN"
           valueFrom:
             secretKeyRef:

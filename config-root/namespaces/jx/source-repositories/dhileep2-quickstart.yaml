@@ -3,20 +3,20 @@ kind: SourceRepository
 metadata:
   creationTimestamp: null
   labels:
-    owner: dhileepdev
-    provider: github
+    owner: dhileep2
+    provider: gitlab
     repository: quickstart
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  name: dhileepdev-quickstart
+  name: dhileep2-quickstart
   namespace: jx
 spec:
-  httpCloneURL: https://github.com/dhileepdev/quickstart.git
-  org: dhileepdev
-  provider: https://github.com
-  providerKind: github
+  httpCloneURL: https://gitlab.com/dhileep2/quickstart.git
+  org: dhileep2
+  provider: https://gitlab.com
+  providerKind: gitlab
   providerName: github
   repo: quickstart
   scheduler:
     kind: ""
     name: in-repo
-  url: https://github.com/dhileepdev/quickstart
+  url: https://gitlab.com/dhileep2/quickstart
