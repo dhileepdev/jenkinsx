@@ -12,6 +12,8 @@ spec:
     - name: python-test
     - name: quickstart
     scheduler: in-repo
+  jenkinsServers:
+  - server: myjenkins
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
