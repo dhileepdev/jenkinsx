@@ -26,7 +26,7 @@
 	      <td>jx-pipelines-visualizer</td>
 	      <td title='Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.'><a href='https://github.com/jenkins-x/jx-pipelines-visualizer'> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg' width='24px' height='24px'> jx-pipelines-visualizer</a></td>
 	      <td>1.8.2</td>
-	      <td><a href='http://dashboard-jx.change.me'>view</a></td>
+	      <td><a href='http://dashboard-jx.192.168.49.2.nip.io'>view</a></td>
 	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer'>source</a></td>
 	    </tr>
     <tr>
@@ -54,7 +54,7 @@
 	      <td>docker-registry</td>
 	      <td title='A Helm chart for Docker Registry'><a href='https://hub.docker.com/_/registry/'> <img src='https://helm.twun.io/docker-registry.png' width='24px' height='24px'> docker-registry</a></td>
 	      <td></td>
-	      <td><a href='http://docker-registry-jx.change.me/'>view</a></td>
+	      <td><a href='http://docker-registry-jx.192.168.49.2.nip.io/'>view</a></td>
 	      <td><a href='https://github.com/docker/distribution-library-image'>source</a></td>
 	    </tr>
     <tr>
@@ -63,6 +63,23 @@
 	      <td>0.5.4</td>
 	      <td></td>
 	      <td><a href='https://github.com/jenkins-x-plugins/jx-build-controller'>0</a> <a href='https://github.com/jenkins-x-plugins/jx-build-controller.git'>1</a> </td>
+	    </tr>
+    <tr>
+		      <td colspan='5'><h3>myjenkins</h3></td>
+		    </tr>
+	    <tr>
+	      <td>jenkins</td>
+	      <td title='Jenkins - Build great things at any scale! The leading open source automation server, Jenkins provides over 1800 plugins to support building, deploying and automating any project.'><a href='https://jenkins.io/'> <img src='https://get.jenkins.io/art/jenkins-logo/logo.svg' width='24px' height='24px'> jenkins</a></td>
+	      <td></td>
+	      <td><a href='http://jenkins-myjenkins.192.168.49.2.nip.io'>view</a></td>
+	      <td><a href='https://github.com/jenkinsci/jenkins'>0</a> <a href='https://github.com/jenkinsci/docker-inbound-agent'>1</a> <a href='https://github.com/maorfr/kube-tasks'>2</a> <a href='https://github.com/jenkinsci/configuration-as-code-plugin'>3</a> </td>
+	    </tr>
+    <tr>
+	      <td>jenkins-resources</td>
+	      <td title='A Helm chart for Jenkins Resources'><a href='https://github.com/jenkins-x-charts/jenkins-resources'> <img src='https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png' width='24px' height='24px'> jenkins-resources</a></td>
+	      <td></td>
+	      <td></td>
+	      <td></td>
 	    </tr>
     <tr>
 		      <td colspan='5'><h3>tekton-pipelines</h3></td>

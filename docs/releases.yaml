@@ -9,9 +9,9 @@
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
     ingresses:
     - name: bucketrepo
-      url: http://bucketrepo-jx.change.me
+      url: http://bucketrepo-jx.192.168.49.2.nip.io
     - name: hook
-      url: http://hook-jx.change.me/hook
+      url: http://192.168.49.2.nip.io/hook
     lastDeployed: "2023-09-25T10:43:46Z"
     name: jxboot-helmfile-resources
     releaseName: jxboot-helmfile-resources
@@ -23,7 +23,7 @@
     version: 1.1.338
   - apiVersion: v1
     appVersion: 1.8.2
-    applicationUrl: http://dashboard-jx.change.me
+    applicationUrl: http://dashboard-jx.192.168.49.2.nip.io
     description: Web UI for Jenkins X, with a clear goal - visualize the pipelines
       - and their logs.
     firstDeployed: "2023-09-25T10:43:47Z"
@@ -31,7 +31,7 @@
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
     ingresses:
     - name: jx-pipelines-visualizer
-      url: http://dashboard-jx.change.me
+      url: http://dashboard-jx.192.168.49.2.nip.io
     lastDeployed: "2023-09-25T10:43:47Z"
     name: jx-pipelines-visualizer
     releaseName: jx-pipelines-visualizer
@@ -82,14 +82,14 @@
     version: 0.5.0
   - apiVersion: v1
     appVersion: 2.8.1
-    applicationUrl: http://docker-registry-jx.change.me/
+    applicationUrl: http://docker-registry-jx.192.168.49.2.nip.io/
     description: A Helm chart for Docker Registry
     firstDeployed: "2023-09-25T10:43:51Z"
     home: https://hub.docker.com/_/registry/
     icon: https://helm.twun.io/docker-registry.png
     ingresses:
     - name: docker-registry
-      url: http://docker-registry-jx.change.me/
+      url: http://docker-registry-jx.192.168.49.2.nip.io/
     lastDeployed: "2023-09-25T10:43:51Z"
     maintainers:
     - email: devin@canterberry.cc
@@ -121,6 +121,78 @@
     - https://github.com/jenkins-x-plugins/jx-build-controller
     - https://github.com/jenkins-x-plugins/jx-build-controller.git
     version: 0.5.4
+- namespace: myjenkins
+  path: helmfiles/myjenkins/helmfile.yaml
+  releases:
+  - annotations:
+      artifacthub.io/category: integration-delivery
+      artifacthub.io/images: |
+        - name: jenkins
+          image: jenkins/jenkins:2.414.2-jdk11
+        - name: k8s-sidecar
+          image: kiwigrid/k8s-sidecar:1.24.4
+        - name: inbound-agent
+          image: jenkins/inbound-agent:3107.v665000b_51092-15
+        - name: backup
+          image: maorfr/kube-tasks:0.2.0
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
+        - name: Jenkins
+          url: https://www.jenkins.io/
+        - name: support
+          url: https://github.com/jenkinsci/helm-charts/issues
+    apiVersion: v2
+    appVersion: 2.414.2
+    applicationUrl: http://jenkins-myjenkins.192.168.49.2.nip.io
+    description: Jenkins - Build great things at any scale! The leading open source
+      automation server, Jenkins provides over 1800 plugins to support building, deploying
+      and automating any project.
+    firstDeployed: "2023-10-04T11:23:24Z"
+    home: https://jenkins.io/
+    icon: https://get.jenkins.io/art/jenkins-logo/logo.svg
+    ingresses:
+    - name: jenkins
+      url: http://jenkins-myjenkins.192.168.49.2.nip.io
+    keywords:
+    - jenkins
+    - ci
+    - devops
+    lastDeployed: "2023-10-04T11:23:24Z"
+    maintainers:
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: garridomota@gmail.com
+      name: mogaal
+    - email: wmcdona89@gmail.com
+      name: wmcdona89
+    - email: timjacomb1@gmail.com
+      name: timja
+    name: jenkins
+    releaseName: jenkins
+    repositoryName: jenkinsci
+    repositoryUrl: https://charts.jenkins.io
+    resourcePath: config-root/namespaces/myjenkins/jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-inbound-agent
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+  - apiVersion: v1
+    appVersion: 1.0.0
+    description: A Helm chart for Jenkins Resources
+    firstDeployed: "2023-10-04T11:23:33Z"
+    home: https://github.com/jenkins-x-charts/jenkins-resources
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    lastDeployed: "2023-10-04T11:23:33Z"
+    name: jenkins-resources
+    releaseName: jenkins-resources
+    repositoryName: jxgh
+    repositoryUrl: https://jenkins-x-charts.github.io/repo
+    resourcePath: config-root/namespaces/myjenkins/jenkins-resources
 - namespace: tekton-pipelines
   path: helmfiles/tekton-pipelines/helmfile.yaml
   releases:

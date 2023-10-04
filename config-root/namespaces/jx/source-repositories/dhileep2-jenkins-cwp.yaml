@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: dhileep2
+    provider: gitlab
+    repository: jenkins-cwp
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: dhileep2-jenkins-cwp
+  namespace: jx
+spec:
+  httpCloneURL: https://gitlab.com/dhileep2/jenkins-cwp.git
+  org: dhileep2
+  provider: https://gitlab.com
+  providerKind: gitlab
+  providerName: github
+  repo: jenkins-cwp
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://gitlab.com/dhileep2/jenkins-cwp

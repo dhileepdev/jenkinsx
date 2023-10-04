@@ -8,6 +8,14 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - dhileep2/jenkins-cwp
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - dhileep2/python-test
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - dhileep2/quickstart
       require_self_approval: true
     cat: {}
@@ -20,7 +28,17 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      dhileep2/jenkins-cwp:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       dhileep2/jenkinsx:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      dhileep2/python-test:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -35,8 +53,36 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      dhileep2/jenkins-cwp:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       dhileep2/jenkinsx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      dhileep2/python-test:
       - approve
       - assign
       - help
@@ -75,6 +121,12 @@ data:
     triggers:
     - repos:
       - dhileep2/jenkinsx
+      trusted_org: dhileep2
+    - repos:
+      - dhileep2/jenkins-cwp
+      trusted_org: dhileep2
+    - repos:
+      - dhileep2/python-test
       trusted_org: dhileep2
     - repos:
       - dhileep2/quickstart

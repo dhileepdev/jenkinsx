@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: dhileep2
+    provider: gitlab
+    repository: python-test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: dhileep2-python-test
+  namespace: jx
+spec:
+  httpCloneURL: https://gitlab.com/dhileep2/python-test.git
+  org: dhileep2
+  provider: https://gitlab.com
+  providerKind: gitlab
+  providerName: github
+  repo: python-test
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://gitlab.com/dhileep2/python-test
