@@ -30,6 +30,7 @@ jxRequirements:
     gitName: gitlab
     gitServer: https://gitlab.com
     provider: minikube
+    registry: 10.96.149.39
   environments:
   - key: dev
     owner: dhileep2
